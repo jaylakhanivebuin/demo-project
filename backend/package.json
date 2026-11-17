@@ -1,0 +1,18 @@
+{
+  "name": "ec2-node-demo-backend",
+  "version": "1.0.0",
+  "description": "The Node.js API backend for the EC2 task tracker",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:status": "pm2 status",
+    "pm2:stop": "pm2 stop ec2-task-tracker",
+    "pm2:restart": "pm2 restart ec2-task-tracker",
+    "pm2:logs": "pm2 logs ec2-task-tracker"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

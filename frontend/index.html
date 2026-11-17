@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EC2 Task Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">NODE.JS • EC2 DEPLOYMENT PRACTICE</p>
+      <h1>EC2 Task Tracker</h1>
+      <p class="subtitle">A tiny full-stack app to test your AWS EC2 deployment.</p>
+      <div id="serverStatus" class="status">Checking backend...</div>
+    </header>
+
+    <section class="panel">
+      <form id="taskForm">
+        <input id="taskInput" type="text" maxlength="100" placeholder="Add a deployment task..." required>
+        <button type="submit">Add task</button>
+      </form>
+      <div class="list-heading">
+        <h2>Your tasks</h2>
+        <span id="taskCount">0 tasks</span>
+      </div>
+      <ul id="taskList"></ul>
+      <p id="emptyState" class="empty">No tasks yet. Add your first task above.</p>
+      <p id="errorMessage" class="error" role="alert"></p>
+    </section>
+
+    <footer>Frontend: HTML, CSS, JavaScript &nbsp;|&nbsp; Backend: Node.js + Express</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
