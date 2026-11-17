@@ -8,6 +8,17 @@ A small task tracker with a static frontend and a Node.js/Express API. The front
 - `backend/` - Express API, PM2 configuration, and its Node.js Dockerfile
 - `nginx/ec2-node-demo.conf` - host Nginx reverse-proxy site configuration
 
+## Build the frontend
+
+From the frontend directory, run:
+
+```bash
+cd frontend
+npm run build
+```
+
+The static production files are written to `frontend/dist/`. The frontend Dockerfile runs this build automatically before copying the output into Nginx.
+
 ## Build and run on EC2
 
 Allow inbound TCP **80** in the instance's Security Group. Restrict SSH (22) to your IP, and do not expose ports 3000 or 8080 publicly. Ensure Docker is installed on the Ubuntu instance and Nginx is already installed.
